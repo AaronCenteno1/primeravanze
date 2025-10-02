@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RegistroEstudiante</string>
+    <string name="guardar">guardar</string>
+    <string name="salir">salir</string>
+    <string name="registro_de_estudiante">Registro De Estudiante</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="edad">Edad</string>
+    <string name="correo">Correo</string>
+    <string name="carrera">CARRERA</string>
+</resources>
