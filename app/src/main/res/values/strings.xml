@@ -8,4 +8,5 @@
     <string name="edad">Edad</string>
     <string name="correo">Correo</string>
     <string name="carrera">CARRERA</string>
+    <string name="registro_informacion">Registro Informacion</string>
 </resources>

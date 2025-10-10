@@ -1,5 +1,6 @@
 package com.example.registroestudiante;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -47,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 finish();
             }
+        });
+
+        Button btnmostrar = findViewById(R.id.btnmostrar);
+        btnmostrar.setOnClickListener( v -> {
+            Intent intent = new Intent(MainActivity.this,InformationActivity.class);
+            startActivity(intent);
         });
     }
 }
