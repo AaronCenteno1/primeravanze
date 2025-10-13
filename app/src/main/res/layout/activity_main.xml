@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -14,6 +15,7 @@
         android:layout_marginTop="40dp"
         android:text="@string/registro_de_estudiante"
         android:textSize="20sp"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +28,7 @@
         android:autofillHints=""
         android:text="@string/nombre"
         android:textSize="20sp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/txtnombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.176"
@@ -55,6 +58,7 @@
         android:autofillHints=""
         android:text="@string/apellido"
         android:textSize="20sp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/txtapellido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.177"
@@ -83,6 +87,7 @@
         android:autofillHints=""
         android:text="@string/edad"
         android:textSize="20sp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/txtedad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.161"
@@ -114,6 +119,7 @@
         android:autofillHints=""
         android:text="@string/correo"
         android:textSize="20sp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/txtcorreo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.168"
@@ -166,6 +172,7 @@
         android:layout_marginBottom="19dp"
         android:autofillHints=""
         android:text="@string/carrera"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/txtcarrer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.171"

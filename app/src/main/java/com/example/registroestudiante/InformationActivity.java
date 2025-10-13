@@ -3,6 +3,7 @@ package com.example.registroestudiante;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.AdapterView;
 
@@ -26,6 +27,12 @@ public class InformationActivity extends AppCompatActivity {
 
         listrecord = findViewById(R.id.listrecord);
         showdata();
+        //boton para regresar  al menu principal
+        Button btnmain = findViewById(R.id.btnmain);
+        btnmain.setOnClickListener(v -> {
+            Intent intent = new Intent(InformationActivity.this,MainActivity.class);
+            startActivity(intent);
+        } );
 
         // Evento al hacer clic en un item de la lista
         listrecord.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -43,6 +50,7 @@ public class InformationActivity extends AppCompatActivity {
                 intent.putExtra("STUDENT_ID", studentId);
                 startActivity(intent);
             }
+
         });
     }
 
@@ -64,4 +72,5 @@ public class InformationActivity extends AppCompatActivity {
         super.onResume();
         showdata();
     }
+
 }

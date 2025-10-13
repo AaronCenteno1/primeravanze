@@ -9,4 +9,13 @@
     <string name="correo">Correo</string>
     <string name="carrera">CARRERA</string>
     <string name="registro_informacion">Registro Informacion</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="edad1">Edad</string>
+    <string name="apellidopaterno">Apellido</string>
+    <string name="nombreedicion">Nombre</string>
+    <string name="correoedicion">Correo</string>
+    <string name="carreraedcicion">Carrera</string>
+    <string name="panel_de_edici_n">Panel de Edición</string>
+    <string name="regresaredicion">Regresar</string>
 </resources>

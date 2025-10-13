@@ -1,5 +1,6 @@
 package com.example.registroestudiante;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,15 +31,30 @@ public class deleteinfo extends AppCompatActivity {
         EditText txtcorreo = findViewById(R.id.edtEmail);
         EditText txtcarrera = findViewById(R.id.edtCarrer);
 
-        // Botones
+        // los botones para eliminar y actualizar
         Button btnactualizar = findViewById(R.id.btnupdate);
         Button btneliminar = findViewById(R.id.btndelete);
 
-        // Obtener el ID pasado desde InformationActivity
+        //  Obtener el ID pasado desde InformationActivity
         studentId = getIntent().getIntExtra("STUDENT_ID", -1);
 
+        // ✅ Mostrar los datos del estudiante seleccionado
+        if (studentId != -1) {
+            String[] studentData = StudentsDatabase.getStudentById(studentId);
+            if (studentData != null) {
+                txtnombre.setText(studentData[0]);
+                txtapellido.setText(studentData[1]);
+                txtedad.setText(studentData[2]);
+                txtcorreo.setText(studentData[3]);
+                txtcarrera.setText(studentData[4]);
+            } else {
+                Toast.makeText(this, "No se encontró información del estudiante", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(this, "Error: ID de estudiante no válido", Toast.LENGTH_SHORT).show();
+        }
 
-        // Botón para actualizar
+        // ✅ Botón para actualizar
         btnactualizar.setOnClickListener(v -> {
             String nombre = txtnombre.getText().toString();
             String apellido = txtapellido.getText().toString();
@@ -55,7 +71,7 @@ public class deleteinfo extends AppCompatActivity {
             }
         });
 
-        // Botón para eliminar
+        // ✅ Botón para eliminar
         btneliminar.setOnClickListener(v -> {
             boolean eliminado = studentsDatabase.deleteStudent(studentId);
             if (eliminado) {
@@ -65,5 +81,11 @@ public class deleteinfo extends AppCompatActivity {
                 Toast.makeText(deleteinfo.this, "Error al eliminar el estudiante", Toast.LENGTH_SHORT).show();
             }
         });
+
+        Button btninformacion = findViewById(R.id.btninformation);
+        btninformacion.setOnClickListener(v -> {
+            Intent intent = new Intent(deleteinfo.this,InformationActivity.class);
+            startActivity(intent);
+        } );
     }
 }
