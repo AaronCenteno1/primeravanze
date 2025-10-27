@@ -16,7 +16,7 @@ Incluye funcionalidades completas de **creación, visualización, actualización
 ## 🛠️ Entorno de Desarrollo
 
 - 🧩 **Entorno:** Android Studio (JetBrains s.r.o.)  
-- ☕ **Lenguaje:** Java  
+- ☕ **Lenguaje:** Java  17
 - 💾 **Base de Datos:** SQLite nativa de Android  
 - 🧱 **SDK Mínimo:** API 24 (Android 7.0 Nougat)  
 - 🎯 **SDK Objetivo:** API 33 (Android 13) o superior  
